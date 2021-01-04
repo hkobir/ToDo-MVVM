@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    >
+<LinearLayout
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="2dp"
+    android:id="@+id/headerLayout"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/headerTextTV"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        style="@style/AppFontColorWhite"
+        android:padding="8dp"
+        android:textSize="16dp"
+        android:text="Add task"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_add"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/headerLayout"
+        android:layout_margin="15dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/titleET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_modified_states"
+            android:hint="Task title"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorHint="#CECCCC" />
+
+        <EditText
+            android:id="@+id/detailET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_modified_states"
+            android:hint="Task detail"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColorHint="#CECCCC" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveButton"
+                style="@style/AppMediumText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_back"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                 />
+
+            <Button
+                android:id="@+id/cancelButton"
+                style="@style/AppMediumText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_back"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
