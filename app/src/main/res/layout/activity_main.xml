@@ -65,5 +65,18 @@
             app:layout_constraintBottom_toBottomOf="@+id/noteListLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_add" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/emptyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty task!"
+            android:textColor="#D7F44336"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/noteListLayout"
+            app:layout_constraintEnd_toEndOf="@+id/noteListLayout"
+            app:layout_constraintStart_toStartOf="@+id/noteListLayout"
+            app:layout_constraintTop_toTopOf="@+id/noteListLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

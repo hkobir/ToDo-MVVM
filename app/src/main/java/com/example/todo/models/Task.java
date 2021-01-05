@@ -7,12 +7,13 @@ import androidx.room.PrimaryKey;
 public class Task {
     @PrimaryKey(autoGenerate = true)
     int id;
-    String title, detail;
+    String title, detail,date;
 
-    public Task(int id, String title, String detail) {
-        this.id = id;
+    public Task(String title, String detail,String date) {
+
         this.title = title;
         this.detail = detail;
+        this.date = date;
     }
 
     public int getId() {
@@ -37,5 +38,13 @@ public class Task {
 
     public void setDetail(String detail) {
         this.detail = detail;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

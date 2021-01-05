@@ -22,7 +22,7 @@ public interface TaskDao {
     @Delete
     void deleteTask(Task task);
 
-    @Query("select * From task order by id")
+    @Query("select * From task")
     LiveData<List<Task>> getAllTask();
 
     @Query("delete from task")

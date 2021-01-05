@@ -40,7 +40,7 @@ public class Repository {
         });
     }
 
-    void deleteSemester(final Task task) {
+    void deleteTask(final Task task) {
         TaskDatabase.databaseWriteExecutor.execute(new Runnable() {
             @Override
             public void run() {
