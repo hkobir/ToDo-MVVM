@@ -97,7 +97,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/cancelButton"
+        android:id="@+id/cancelBtn"
         style="@style/AppMediumText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
