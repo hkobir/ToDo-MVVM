@@ -104,6 +104,7 @@
         android:layout_below="@+id/menuField"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/button_back"
         android:text="Cancel"
         android:textAllCaps="false"
