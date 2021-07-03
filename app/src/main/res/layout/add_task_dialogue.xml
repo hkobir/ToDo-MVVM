@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:gravity="center_horizontal"
     >
 <LinearLayout
@@ -35,7 +35,7 @@
         android:layout_margin="15dp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <EditText
@@ -47,20 +47,20 @@
             android:imeOptions="actionNext"
             android:inputType="text"
             android:padding="10dp"
-            android:singleLine="true"
             android:textColorHint="#CECCCC" />
 
         <EditText
             android:id="@+id/detailET"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:layout_marginTop="12dp"
             android:background="@drawable/edittext_modified_states"
             android:hint="Task detail"
             android:imeOptions="actionDone"
-            android:inputType="text"
             android:padding="10dp"
-            android:singleLine="true"
             android:textColorHint="#CECCCC" />
 
 

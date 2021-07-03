@@ -16,8 +16,8 @@ public interface TaskDao {
     @Insert
     void insertTask(Task task);
 
-    @Query("UPDATE task set title =:title, detail =:detail WHERE id =:id")
-    void updateTask(int id, String title,  String detail);
+    @Query("UPDATE task set title =:title, detail =:detail, status=:status WHERE id =:id")
+    void updateTask(int id, String title, String detail, String status);
 
     @Delete
     void deleteTask(Task task);

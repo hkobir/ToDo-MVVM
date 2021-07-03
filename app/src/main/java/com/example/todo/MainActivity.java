@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     List<Task> taskList;
     private TaskAdapter taskAdapter;
     TaskViewModel viewModel;
-    private AlertDialog addHealthDialog;
+    private AlertDialog addTaskDialog;
     private SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");
     boolean doubleBackToExitPressedOnce = false;
 
@@ -84,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addTask() {
-        addHealthDialog = new AlertDialog.Builder(MainActivity.this).create();
+        addTaskDialog = new AlertDialog.Builder(MainActivity.this).create();
+        addTaskDialog.setCancelable(false);
         final View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.add_task_dialogue, null);
         final EditText titleET = view.findViewById(R.id.titleET);
         final EditText detailET = view.findViewById(R.id.detailET);
@@ -112,20 +113,20 @@ public class MainActivity extends AppCompatActivity {
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addHealthDialog.dismiss();
+                addTaskDialog.dismiss();
             }
         });
-        addHealthDialog.setView(view);
-        addHealthDialog.show();
+        addTaskDialog.setView(view);
+        addTaskDialog.show();
     }
 
     private void saveTaskData(String title, String detail) {
         String cDate = dateFormat.format(new Date());
-        Task task = new Task(title, detail, cDate);
+        Task task = new Task(title, detail, cDate, "undone");
         viewModel.insertTask(task);
         taskAdapter.notifyDataSetChanged();
         Toast.makeText(this, "Task added", Toast.LENGTH_SHORT).show();
-        addHealthDialog.dismiss();
+        addTaskDialog.dismiss();
     }
 
 

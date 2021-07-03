@@ -31,11 +31,11 @@ public class Repository {
         });
     }
 
-    void updateTask(final int id, final String title, final String detail) {
+    void updateTask(final int id, final String title, final String detail,final String status) {
         TaskDatabase.databaseWriteExecutor.execute(new Runnable() {
             @Override
             public void run() {
-                taskDao.updateTask(id, title, detail);
+                taskDao.updateTask(id, title, detail, status);
             }
         });
     }

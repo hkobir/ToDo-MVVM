@@ -1,40 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     android:paddingHorizontal="15dp"
-    android:paddingVertical="30dp"
-    android:background="@color/colorPrimary">
-<TextView
-    android:id="@+id/titleTV"
-    style="@style/AppFontColorWhite"
-    android:padding="5dp"
-    android:background="@drawable/custom_title_back"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="title of text"/>
-<TextView
-    android:id="@+id/dateTV"
-    android:layout_marginTop="4dp"
-    style="@style/AppSmallText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="1,sep"/>
-    <LinearLayout
-        android:background="@drawable/custom_detail_back"
-        android:layout_marginTop="15dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/titleTV"
+        style="@style/AppFontColorWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/custom_title_back"
         android:padding="5dp"
-        android:orientation="vertical"
+        android:text="title of text" />
+
+    <TextView
+        android:id="@+id/dateTV"
+        style="@style/AppSmallText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="1,sep" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: "
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/statusCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inomplete"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_detail_back"
+        android:orientation="vertical"
+        android:padding="5dp">
+
         <TextView
             android:id="@+id/detailTV"
             style="@style/AppMediumText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="details of text here included"/>
+            android:scrollbars="vertical"
+            android:text="details of text here included" />
     </LinearLayout>
+
 </LinearLayout>

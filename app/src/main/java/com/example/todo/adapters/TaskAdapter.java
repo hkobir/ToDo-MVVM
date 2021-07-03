@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,14 +47,28 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull TaskAdapter.ViewHolder holder, final int position) {
 
         final Task cTask = taskList.get(position);
-        holder.title.setText(cTask.getTitle());
-        holder.detail.setText(cTask.getDetail());
+        holder.title.setText(
+                cTask.getTitle().length() >= 25 ?
+                        cTask.getTitle().substring(0, 25) + "..." : cTask.getTitle()
+        );
+
+        holder.detail.setText(
+                cTask.getDetail().length() >= 25 ?
+                        cTask.getDetail().substring(0, 25) + "..." : cTask.getDetail()
+        );
+
+
         holder.date.setText(cTask.getDate());
+        if (cTask.getStatus().equals("done")) {
+            holder.statusIV.setImageResource(R.drawable.ic_check_circle);
+        } else {
+            holder.statusIV.setImageResource(R.drawable.ic_uncheck_circle);
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DetailTaskSheet detailTaskSheet = new DetailTaskSheet(cTask.getTitle(), cTask.getDetail(), cTask.getDate());
+                DetailTaskSheet detailTaskSheet = new DetailTaskSheet(cTask.getId(), cTask.getTitle(), cTask.getDetail(), cTask.getDate(), cTask.getStatus());
                 detailTaskSheet.show(((FragmentActivity) context).getSupportFragmentManager(), "Task Details");
             }
         });
@@ -76,12 +91,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView title, detail, date;
+        private ImageView statusIV;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.titleTaskTV);
             detail = itemView.findViewById(R.id.detailTaskTV);
             date = itemView.findViewById(R.id.dateTV);
+            statusIV = itemView.findViewById(R.id.statusIV);
         }
     }
 
@@ -149,7 +166,8 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
                 viewModel.updateTask(
                         task.getId(),
                         titleET.getText().toString(),
-                        detailET.getText().toString()
+                        detailET.getText().toString(),
+                        task.getStatus()
                 );
                 Toast.makeText(context, "Task updated", Toast.LENGTH_SHORT).show();
                 updateDialogue.dismiss();
