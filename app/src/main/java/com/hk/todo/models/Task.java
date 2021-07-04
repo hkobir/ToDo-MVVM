@@ -1,4 +1,4 @@
-package com.example.todo.models;
+package com.hk.todo.models;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

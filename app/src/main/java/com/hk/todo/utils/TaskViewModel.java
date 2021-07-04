@@ -1,4 +1,4 @@
-package com.example.todo.utils;
+package com.hk.todo.utils;
 
 import android.app.Application;
 
@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.todo.models.Task;
+import com.hk.todo.models.Task;
 
 import java.util.List;
 

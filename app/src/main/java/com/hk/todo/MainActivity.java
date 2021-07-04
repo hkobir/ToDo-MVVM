@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.hk.todo;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,10 +16,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.todo.adapters.TaskAdapter;
-import com.example.todo.databinding.ActivityMainBinding;
-import com.example.todo.models.Task;
-import com.example.todo.utils.TaskViewModel;
+
+
+import com.hk.todo.adapters.TaskAdapter;
+
+import com.hk.todo.databinding.ActivityMainBinding;
+import com.hk.todo.models.Task;
+import com.hk.todo.utils.TaskViewModel;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.todo.adapters;
+package com.hk.todo.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -17,11 +17,10 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.todo.DetailTaskSheet;
-import com.example.todo.MainActivity;
-import com.example.todo.R;
-import com.example.todo.models.Task;
-import com.example.todo.utils.TaskViewModel;
+import com.hk.todo.DetailTaskSheet;
+import com.hk.todo.R;
+import com.hk.todo.models.Task;
+import com.hk.todo.utils.TaskViewModel;
 
 import java.util.List;
 

@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.todo",
+  "applicationId": "com.hk.todo",
   "variantName": "processReleaseResources",
   "elements": [
     {

@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.hk.todo;
 
 import org.junit.Test;
 

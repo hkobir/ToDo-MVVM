@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.hk.todo;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.todo.utils.TaskViewModel;
+import com.hk.todo.utils.TaskViewModel;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class DetailTaskSheet extends BottomSheetDialogFragment {

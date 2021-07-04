@@ -1,13 +1,12 @@
-package com.example.todo.utils;
+package com.hk.todo.utils;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.RawQuery;
 
-import com.example.todo.models.Task;
+import com.hk.todo.models.Task;
 
 import java.util.List;
 
